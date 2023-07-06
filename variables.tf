@@ -30,7 +30,7 @@ variable "availability_zone" {
 
 variable "subnets" {
   description = "List of subnets for the EC2 instance"
-  type        = list
+  type        = string
 }
 
 variable "environment" {
