@@ -1,5 +1,5 @@
 
-resource "aws_vpc" "vpc_id" {
+resource "aws_security_group" "ec2_sg" {
   cidr_block = "10.0.0.0/16"
 }
 

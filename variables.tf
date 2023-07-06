@@ -19,7 +19,8 @@ variable "ec2_key_name" {
 
 variable "ec2_count" {
   description = "Number of EC2 instances to create"
-  default     = 2
+  type = number
+  default     = "2"
 }
 
 variable "availability_zone" {
@@ -29,7 +30,7 @@ variable "availability_zone" {
 
 variable "subnets" {
   description = "List of subnets for the EC2 instance"
-  type        = list(string)
+  type        = list
 }
 
 variable "environment" {
