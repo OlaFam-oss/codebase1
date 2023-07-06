@@ -1,5 +1,5 @@
 
-resource "aws_instance" "amazon_linux" {
+resource "aws_instance" "ec2" {
   ami               = var.ec2_ami
   instance_type     = var.ec2_instance_type
   key_name          = var.ec2_key_name
