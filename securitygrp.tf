@@ -1,4 +1,4 @@
-resource "aws_security_group" "ec2" {
+resource "aws_security_group" "ec2_sg" {
   name        = "ec2_sg"
   description = "AWS security group"
   vpc_id      = "vpc-0005bae46051f5692"
@@ -41,7 +41,7 @@ resource "aws_instance" "instance1" {
   ami                    = var.ec2_ami
   instance_type          = var.ec2_instance_type
   subnet_id              = aws_subnet.subnet1.id
-  vpc_security_group_ids = [aws_security_group.ec2.id]
+  vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
   # Other instance configuration...
 }
@@ -50,9 +50,10 @@ resource "aws_instance" "instance2" {
   ami                    = var.ec2_ami
   instance_type          = var.ec2_instance_type
   subnet_id              = aws_subnet.subnet2.id
-  vpc_security_group_ids = [aws_security_group.ec2.id]
+  vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
   # Other instance configuration...
 }
+
 
 
