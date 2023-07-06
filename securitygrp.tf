@@ -1,8 +1,5 @@
-provider "aws" {
-  region = "eu-west-1" # Replace with your desired AWS region
-}
 
-resource "aws_vpc" "example" {
+resource "aws_vpc" "vpc_id" {
   cidr_block = "10.0.0.0/16"
 }
 
