@@ -41,7 +41,7 @@ variable "product" {
   description = "Product name"
 }
 
-variable "sg_name" {
+variable "ec2_sg" {
   description = "security group name"
 }
 
