@@ -29,16 +29,30 @@ resource "aws_subnet" "subnet1" {
   vpc_id            = "vpc-0005bae46051f5692"
   cidr_block        = "10.0.0.0/24"
   availability_zone = "eu-west-1a" # Replace with your desired availability zone
-
-  # Associate the security group with the subnet
-  security_group_ids = [aws_security_group.ec2_sg.id]
 }
 
 resource "aws_subnet" "subnet2" {
   vpc_id            = "vpc-0005bae46051f5692"
   cidr_block        = "10.0.1.0/24"
   availability_zone = "eu-west-1b" # Replace with your desired availability zone
-
-  # Associate the security group with the subnet
-  security_group_ids = [aws_security_group.ec2_sg.id]
 }
+
+resource "aws_instance" "instance1" {
+  ami                    = var.ec2_ami
+  instance_type          = var.ec2_instance_type
+  subnet_id              = aws_subnet.subnet1.id
+  vpc_security_group_ids = [aws_security_group.ec2_sg.id]
+
+  # Other instance configuration...
+}
+
+resource "aws_instance" "instance2" {
+  ami                    = var.ec2_ami
+  instance_type          = var.ec2_instance_type
+  subnet_id              = aws_subnet.subnet2.id
+  vpc_security_group_ids = [aws_security_group.ec2_sg.id]
+
+  # Other instance configuration...
+}
+
+

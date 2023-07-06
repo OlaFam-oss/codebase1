@@ -1,6 +1,6 @@
 variable "aws_region" {
   default = "eu-west-1"
-  }
+}
 
 variable "ec2_ami" {
   description = "AMI ID for the EC2 instance"
@@ -19,7 +19,7 @@ variable "ec2_key_name" {
 
 variable "ec2_count" {
   description = "Number of EC2 instances to create"
-  type = number
+  type        = number
   default     = "2"
 }
 
@@ -30,7 +30,7 @@ variable "availability_zone" {
 
 variable "subnets" {
   description = "List of subnets for the EC2 instance"
-  type        = string
+  type        = list(string)
 }
 
 variable "environment" {
@@ -49,3 +49,14 @@ variable "default_tags" {
   description = "ec2 machine default tag"
 }
 
+variable "bucket" {
+  description = "ec2 bucket"
+}
+
+variable "key" {
+  description = "ec2 machine key"
+}
+
+variable "region" {
+  description = "ec2 region"
+}

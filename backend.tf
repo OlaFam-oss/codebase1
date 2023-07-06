@@ -9,9 +9,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = var.bucket //"dev-tform-state-file"
-    key    = var.key    //"dev/terraform.tfstate"
-    region = var.aws_region//"eu-west-1"
+    bucket = var.bucket     //"dev-tform-state-file"
+    key    = var.key        //"dev/terraform.tfstate"
+    region = var.aws_region //"eu-west-1"
   }
 }
 
