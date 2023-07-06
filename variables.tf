@@ -41,4 +41,11 @@ variable "product" {
   description = "Product name"
 }
 
+variable "sg_name" {
+  description = "security group name"
+}
+
+variable "default_tags" {
+  description = "ec2 machine default tag"
+}
 
