@@ -17,7 +17,7 @@ resource "aws_subnet" "subnet2" {
 resource "aws_security_group" "ec2_sg" {
   name        = "ec2_sg"
   description = "Security group for EC2 instances"
-  vpc_id      = "vpc-0005bae46051f5692"
+  vpc_id      = "vpc-021ae19895cd907b3"
   //vpc_id      = aws_vpc.vpc.id
 
   ingress {
