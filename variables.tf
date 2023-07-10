@@ -61,8 +61,3 @@ variable "key" {
 variable "region" {
   description = "ec2 region"
 }
-
-variable "vpc.id" {
-  description = "vpc id"
-  default     = "vpc-0005bae46051f5692"
-}
