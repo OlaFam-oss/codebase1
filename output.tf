@@ -1,3 +1,7 @@
-output "ec2_sg_IP" {
-  value = join("", aws_instance.ec2_sg[*].public_ip)
+output "instance1_IP" {
+  value = join("", aws_instance.instance1[*].public_ip)
+}
+
+output "instance2_IP" {
+  value = join("", aws_instance.instance2[*].public_ip)
 }

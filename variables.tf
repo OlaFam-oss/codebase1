@@ -17,29 +17,30 @@ variable "ec2_key_name" {
   type        = string
 }
 
-variable "ec2_count" {
-  description = "Number of EC2 instances to create"
-  type        = number
-  default     = "2"
-}
+//variable "ec2_count" {
+  //description = "Number of EC2 instances to create"
+  //type        = number
+  //default     = "2"
+//}
 
 variable "availability_zone" {
   description = "Availability zone for the EC2 instance"
+  type        = string
   //default     = "eu-west-1a"
 }
 
-variable "subnets" {
-  description = "List of subnets for the EC2 instance"
-  type        = list(string)
-}
+//variable "subnets" {
+  //description = "List of subnets for the EC2 instance"
+  //type        = list(string)
+//}
 
-variable "environment" {
-  description = "Environment name"
-}
+//variable "environment" {
+  //description = "Environment name"
+//}
 
-variable "product" {
-  description = "Product name"
-}
+//variable "product" {
+  //description = "Product name"
+//}
 
 variable "ec2_sg" {
   description = "security group name"
@@ -59,4 +60,9 @@ variable "key" {
 
 variable "region" {
   description = "ec2 region"
+}
+
+variable "vpc.id" {
+  description = "vpc id"
+  default     = "vpc-0005bae46051f5692"
 }

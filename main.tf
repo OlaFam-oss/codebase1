@@ -1,16 +1,21 @@
+resource "aws_instance" "instance1" {
+  ami                    = var.ec2_ami
+  instance_type          = var.ec2_instance_type
+  key_name               = var.ec2_key_name
+  subnet_id              = aws_subnet.subnet1.id
+  vpc_security_group_ids = [aws_security_group.sg.id]
+  availability_zone      = aws_subnet.subnet1.availability_zone
 
-resource "aws_instance" "ec2_sg" {
-  ami               = var.ec2_ami
-  instance_type     = var.ec2_instance_type
-  key_name          = var.ec2_key_name
-  count             = var.ec2_count
-  security_groups   = [aws_security_group.ec2_sg.name]
-  availability_zone = var.availability_zone //"eu-west-1a"
-  subnet_id         = element(var.subnets, count.index)
+  # Other instance configuration...
+}
 
-  tags = {
-    name = "${var.environment}.${var.product}"
-  } //var.default_tags
-  //tags = {
-  //Name = "ec2_amazon_linux_sit1"
+resource "aws_instance" "instance2" {
+  ami                    = var.ec2_ami
+  instance_type          = var.ec2_instance_type
+  key_name               = var.ec2_key_name
+  subnet_id              = aws_subnet.subnet2.id
+  vpc_security_group_ids = [aws_security_group.sg.id]
+  availability_zone      = aws_subnet.subnet2.availability_zone
+
+  # Other instance configuration...
 }
