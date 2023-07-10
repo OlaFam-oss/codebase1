@@ -48,6 +48,7 @@ variable "ec2_sg" {
 
 variable "default_tags" {
   description = "ec2 machine default tag"
+    type        = map(any)
 }
 
 variable "bucket" {
