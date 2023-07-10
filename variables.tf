@@ -18,9 +18,9 @@ variable "ec2_key_name" {
 }
 
 //variable "ec2_count" {
-  //description = "Number of EC2 instances to create"
-  //type        = number
-  //default     = "2"
+//description = "Number of EC2 instances to create"
+//type        = number
+//default     = "2"
 //}
 
 variable "availability_zone" {
@@ -30,16 +30,16 @@ variable "availability_zone" {
 }
 
 //variable "subnets" {
-  //description = "List of subnets for the EC2 instance"
-  //type        = list(string)
+//description = "List of subnets for the EC2 instance"
+//type        = list(string)
 //}
 
 //variable "environment" {
-  //description = "Environment name"
+//description = "Environment name"
 //}
 
 //variable "product" {
-  //description = "Product name"
+//description = "Product name"
 //}
 
 variable "ec2_sg" {
